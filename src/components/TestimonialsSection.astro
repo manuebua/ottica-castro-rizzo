@@ -1,0 +1,292 @@
+---
+---
+
+<section class="testimonials">
+  <div class="testimonials__inner container container--padded">
+    <!-- Header -->
+    <div class="testimonials__header">
+      <p class="testimonials__label">Testimonianze</p>
+      <h2 class="testimonials__heading">Quello che dicono i nostri clienti vale più di qualsiasi pubblicità</h2>
+    </div>
+
+    <!-- Cards -->
+    <div class="testimonials__list">
+      <div class="testimonials__cards">
+        <!-- Card 1 -->
+        <article class="testimonials__card">
+          <div class="testimonials__card-top">
+            <img
+              src="/assets/images/testimonial-logo-1.svg"
+              alt="Client company logo"
+              width="164"
+              height="40"
+              class="testimonials__logo"
+            />
+            <div class="testimonials__card-body">
+              <p class="testimonials__client-name">Giuseppina Amato</p>
+              <p class="testimonials__client-text">
+                Sono andata da Castro Rizzo per un esame della vista e sono rimasta stupita dalla
+                professionalità e dalla gentilezza. Mi hanno aiutato a scegliere la montatura
+                perfetta senza farmi sentire pressata. Tornerò sicuramente.
+              </p>
+            </div>
+          </div>
+          <hr class="testimonials__divider" />
+          <div class="testimonials__card-footer">
+            <span class="testimonials__location">Bronte (CT)</span>
+            <span class="testimonials__date">Marzo 2024</span>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="testimonials__card">
+          <div class="testimonials__card-top">
+            <img
+              src="/assets/images/testimonial-logo-2.svg"
+              alt="Logo cliente"
+              width="199"
+              height="40"
+              class="testimonials__logo"
+            />
+            <div class="testimonials__card-body">
+              <p class="testimonials__client-name">Marco Torrisi</p>
+              <p class="testimonials__client-text">
+                Avevo provato diverse ottiche per le lenti a contatto ma non riuscivo mai a trovare
+                quella giusta. Salvatore mi ha seguito con una pazienza incredibile, fino a trovare
+                la lente perfetta per i miei occhi. Finalmente sto bene.
+              </p>
+            </div>
+          </div>
+          <hr class="testimonials__divider" />
+          <div class="testimonials__card-footer">
+            <span class="testimonials__location">Adrano (CT)</span>
+            <span class="testimonials__date">Gennaio 2024</span>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="testimonials__card">
+          <div class="testimonials__card-top">
+            <img
+              src="/assets/images/testimonial-logo-3.svg"
+              alt="Logo cliente"
+              width="232"
+              height="40"
+              class="testimonials__logo"
+            />
+            <div class="testimonials__card-body">
+              <p class="testimonials__client-name">Carmela Grasso</p>
+              <p class="testimonials__client-text">
+                Ho comprato un paio di occhiali da sole bellissimi, ottima qualità e prezzo onesto.
+                Il personale è stato gentilissimo e mi ha consigliato benissimo. Un negozio di altri
+                tempi, nel senso migliore del termine.
+              </p>
+            </div>
+          </div>
+          <hr class="testimonials__divider" />
+          <div class="testimonials__card-footer">
+            <span class="testimonials__location">Randazzo (CT)</span>
+            <span class="testimonials__date">Febbraio 2024</span>
+          </div>
+        </article>
+      </div>
+
+      <!-- Navigation arrows -->
+      <div class="testimonials__nav" aria-label="Testimonial navigation">
+        <button class="testimonials__nav-btn" aria-label="Previous testimonial">
+          <img src="/assets/images/icon-arrow-right.svg" alt="" width="24" height="24" class="testimonials__nav-icon testimonials__nav-icon--prev" />
+        </button>
+        <button class="testimonials__nav-btn" aria-label="Next testimonial">
+          <img src="/assets/images/icon-arrow-right.svg" alt="" width="24" height="24" class="testimonials__nav-icon" />
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials {
+    width: 100%;
+    background-color: var(--color-bg-white);
+    overflow: hidden;
+  }
+
+  .testimonials__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 3.75em;
+    padding-block: 3.75em;
+    align-items: center;
+  }
+
+  /* Header */
+  .testimonials__header {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    text-align: center;
+  }
+
+  .testimonials__label {
+    font-family: var(--font-heading);
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: -0.08px;
+  }
+
+  .testimonials__heading {
+    font-family: var(--font-heading);
+    font-size: 3em;
+    font-weight: 500;
+    line-height: 1.167;
+    color: var(--color-text-dark);
+    letter-spacing: -1.44px;
+    max-width: 12.3em; /* 591px / 48px */
+  }
+
+  /* List */
+  .testimonials__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875em;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Cards grid */
+  .testimonials__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5em;
+    width: 100%;
+  }
+
+  .testimonials__card {
+    background-color: var(--color-bg-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+  }
+
+  .testimonials__card-top {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    flex: 1;
+  }
+
+  .testimonials__logo {
+    height: 2.5em;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: left;
+  }
+
+  .testimonials__card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  .testimonials__client-name {
+    font-family: var(--font-heading);
+    font-size: 1.5em;
+    font-weight: 500;
+    line-height: 1.333;
+    color: var(--color-text-dark);
+  }
+
+  .testimonials__client-text {
+    font-family: var(--font-body);
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-text-body);
+  }
+
+  .testimonials__divider {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: 0;
+  }
+
+  .testimonials__card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-heading);
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.75;
+    color: var(--color-text-meta);
+    white-space: nowrap;
+    gap: 1em;
+  }
+
+  /* Nav arrows */
+  .testimonials__nav {
+    display: flex;
+    gap: 0.625em;
+    align-items: center;
+  }
+
+  .testimonials__nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.25em;
+    height: 3.25em;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-white);
+    cursor: pointer;
+    padding: 1em;
+  }
+
+  .testimonials__nav-btn:hover {
+    background: var(--color-bg-brown);
+  }
+
+  .testimonials__nav-icon {
+    width: 1.5em;
+    height: 1.5em;
+  }
+
+  .testimonials__nav-icon--prev {
+    transform: rotate(180deg);
+  }
+
+  /* ===================== Responsive ===================== */
+  @media (max-width: 991px) {
+    .testimonials__cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .testimonials__heading {
+      font-size: 2.5em;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .testimonials__cards {
+      grid-template-columns: 1fr;
+    }
+
+    .testimonials__heading {
+      font-size: 2em;
+    }
+
+    .testimonials__card-footer {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.25em;
+    }
+  }
+</style>

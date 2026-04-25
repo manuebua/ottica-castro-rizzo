@@ -1,0 +1,303 @@
+---
+---
+
+<section class="hero">
+  <!-- Right side photo -->
+  <div class="hero__image-wrap" aria-hidden="true">
+    <img
+      src="/assets/images/hero-photo.png"
+      alt=""
+      width="728"
+      height="968"
+      class="hero__photo"
+    />
+  </div>
+
+  <!-- Text content -->
+  <div class="hero__content container container--padded">
+    <div class="hero__text">
+      <p class="hero__label">La tua vista, la nostra missione</p>
+      <div class="hero__desc-wrap">
+        <h1 class="hero__heading">Vedere bene è il primo passo per vivere meglio</h1>
+        <p class="hero__body">
+          Da oltre vent'anni, Fotottica Castro Rizzo si prende cura della tua vista con competenza,
+          attenzione e un servizio su misura per ogni esigenza. Il punto di riferimento di Bronte
+          per chi vuole vedere il mondo con occhi nuovi.
+        </p>
+      </div>
+      <a href="#contact" class="hero__cta">Prenota la tua visita gratuita</a>
+    </div>
+  </div>
+
+  <!-- Bottom ticker bar -->
+  <div class="hero__ticker" aria-label="Servizi">
+    <div class="hero__ticker-inner">
+      <!-- Copy 1 -->
+      <div class="hero__ticker-track" aria-hidden="false">
+        <span class="hero__ticker-item">Occhiali da Vista</span>
+        <img src="/assets/images/icon-diamond.svg" alt="" width="30" height="30" class="hero__ticker-dot" />
+        <span class="hero__ticker-item">Occhiali da Sole</span>
+        <img src="/assets/images/icon-diamond.svg" alt="" width="30" height="30" class="hero__ticker-dot" />
+        <span class="hero__ticker-item">Lenti a Contatto</span>
+        <img src="/assets/images/icon-diamond.svg" alt="" width="30" height="30" class="hero__ticker-dot" />
+        <span class="hero__ticker-item">Esame della Vista Gratuito</span>
+        <img src="/assets/images/icon-diamond.svg" alt="" width="30" height="30" class="hero__ticker-dot" />
+        <span class="hero__ticker-item">Fotografia &amp; Stampa Digitale</span>
+        <img src="/assets/images/icon-diamond.svg" alt="" width="30" height="30" class="hero__ticker-dot" />
+      </div>
+      <!-- Copy 2 (seamless loop) -->
+      <div class="hero__ticker-track" aria-hidden="true">
+        <span class="hero__ticker-item">Occhiali da Vista</span>
+        <img src="/assets/images/icon-diamond.svg" alt="" width="30" height="30" class="hero__ticker-dot" />
+        <span class="hero__ticker-item">Occhiali da Sole</span>
+        <img src="/assets/images/icon-diamond.svg" alt="" width="30" height="30" class="hero__ticker-dot" />
+        <span class="hero__ticker-item">Lenti a Contatto</span>
+        <img src="/assets/images/icon-diamond.svg" alt="" width="30" height="30" class="hero__ticker-dot" />
+        <span class="hero__ticker-item">Esame della Vista Gratuito</span>
+        <img src="/assets/images/icon-diamond.svg" alt="" width="30" height="30" class="hero__ticker-dot" />
+        <span class="hero__ticker-item">Fotografia &amp; Stampa Digitale</span>
+        <img src="/assets/images/icon-diamond.svg" alt="" width="30" height="30" class="hero__ticker-dot" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    width: 100%;
+    background-color: var(--color-bg-brown);
+    min-height: 49.375em; /* 790px */
+    overflow: hidden;
+  }
+
+  /* Right-side lawyer photo */
+  .hero__image-wrap {
+    position: absolute;
+    right: 0;
+    bottom: 5.25em; /* 84px — ticker height */
+    width: 49.24%; /* 709/1440 */
+    height: 44.125em; /* 706px */
+    overflow: hidden;
+  }
+
+  .hero__photo {
+    position: absolute;
+    top: -8.8125em; /* -141px */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45.5em; /* 728px */
+    height: 60.5em; /* 968px */
+    max-width: none;
+    object-fit: cover;
+  }
+
+  /* Centered content container — full height, aligned to left */
+  .hero__content {
+    position: relative;
+    height: 100%;
+    min-height: calc(49.375em - 5.25em);
+    display: flex;
+    align-items: flex-start;
+    padding-top: 11.875em; /* 190px — space below navbar */
+  }
+
+  .hero__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875em;
+    max-width: 33.0625em; /* 529px */
+  }
+
+  .hero__label {
+    font-family: var(--font-heading);
+    font-size: 1.25em;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: -0.1px;
+  }
+
+  .hero__desc-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875em;
+  }
+
+  .hero__heading {
+    font-family: var(--font-heading);
+    font-size: 3em;
+    font-weight: 500;
+    line-height: 1.167;
+    color: var(--color-text-dark);
+    letter-spacing: -1.44px;
+  }
+
+  .hero__body {
+    font-family: var(--font-body);
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-text-body);
+  }
+
+  .hero__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75em 1.25em;
+    background-color: var(--color-primary);
+    color: var(--color-text-white);
+    font-family: var(--font-heading);
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.5;
+    white-space: nowrap;
+    text-decoration: none;
+    align-self: flex-start;
+  }
+
+  /* Bottom ticker bar */
+  .hero__ticker {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200vw; /* extends beyond container */
+    background-color: var(--color-primary);
+    height: 5.25em; /* 84px */
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .hero__ticker-inner {
+    display: flex;
+    animation: ticker-scroll 28s linear infinite;
+    will-change: transform;
+  }
+
+  @keyframes ticker-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero__ticker-inner { animation: none; }
+  }
+
+  .hero__ticker-track {
+    display: flex;
+    align-items: center;
+    gap: 2.5em;
+    padding-inline: 1.25em;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .hero__ticker-item {
+    font-family: var(--font-body);
+    font-size: 2.25em;
+    font-weight: 400;
+    line-height: 1.556;
+    color: var(--color-text-white);
+    letter-spacing: -1px;
+    white-space: nowrap;
+  }
+
+  .hero__ticker-dot {
+    width: 1.875em;
+    height: 1.875em;
+    flex-shrink: 0;
+  }
+
+  /* ===================== Responsive ===================== */
+  @media (max-width: 991px) {
+    .hero {
+      min-height: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero__image-wrap {
+      position: relative;
+      right: auto;
+      bottom: auto;
+      width: 100%;
+      height: 25em;
+      margin-top: 0;
+      order: 1;
+    }
+
+    .hero__photo {
+      position: relative;
+      top: auto;
+      left: auto;
+      transform: none;
+      width: 100%;
+      height: 100%;
+    }
+
+    .hero__content {
+      padding-top: 7em;
+      padding-bottom: 3em;
+      min-height: auto;
+      order: 2;
+    }
+
+    .hero__text {
+      max-width: 100%;
+    }
+
+    .hero__heading {
+      font-size: 2.5em;
+    }
+
+    .hero__ticker {
+      position: relative;
+      bottom: auto;
+      left: auto;
+      transform: none;
+      width: 100%;
+      order: 3;
+    }
+
+    .hero__ticker-item {
+      font-size: 1.5em;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .hero__image-wrap {
+      height: 18em;
+    }
+
+    .hero__content {
+      padding-top: 6em;
+      padding-bottom: 3em;
+    }
+
+    .hero__heading {
+      font-size: 2em;
+    }
+
+    .hero__ticker-item {
+      font-size: 1.125em;
+    }
+
+    .hero__ticker {
+      height: 4em;
+    }
+  }
+
+  @media (max-width: 479px) {
+    .hero__heading {
+      font-size: 1.75em;
+    }
+
+    .hero__ticker-item {
+      font-size: 1em;
+    }
+  }
+</style>

@@ -1,0 +1,284 @@
+---
+---
+
+<footer class="footer">
+  <div class="footer__inner container container--padded">
+    <!-- Top row: logo + CTA -->
+    <div class="footer__top">
+      <a href="/" class="footer__logo" aria-label="Fotottica Castro Rizzo home">
+        <img
+          src="/assets/images/logo-fotottica.png"
+          alt="Fotottica Castro Rizzo"
+          width="160"
+          height="80"
+          class="footer__logo-img"
+        />
+      </a>
+      <a href="#contact" class="footer__cta">Prenota una visita</a>
+    </div>
+
+    <!-- Info block -->
+    <div class="footer__info">
+      <!-- Address + contact + menus -->
+      <div class="footer__info-main">
+        <p class="footer__address">
+          Via Martiri di Via Fani, 51/B — 95034 Bronte (CT)<br />
+          Sicilia, Italia
+        </p>
+
+        <div class="footer__contact">
+          <p class="footer__contact-title">Contatti</p>
+          <div class="footer__contact-list">
+            <div class="footer__contact-item">
+              <img src="/assets/images/icon-phone.svg" alt="" width="24" height="24" />
+              <span>095 7721596</span>
+            </div>
+            <div class="footer__contact-item">
+              <img src="/assets/images/icon-sms.svg" alt="" width="24" height="24" />
+              <span>info@fototticastrorizzo.it</span>
+            </div>
+          </div>
+        </div>
+
+        <nav class="footer__menu" aria-label="Menu">
+          <p class="footer__menu-title">Menu</p>
+          <ul class="footer__menu-list">
+            <li><a href="#services" class="footer__menu-link">Occhiali</a></li>
+            <li><a href="#business" class="footer__menu-link">Servizi</a></li>
+            <li><a href="#people" class="footer__menu-link">Chi Siamo</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer__menu" aria-label="Altro">
+          <p class="footer__menu-title">Altro</p>
+          <ul class="footer__menu-list">
+            <li><a href="#" class="footer__menu-link">Lenti a Contatto</a></li>
+            <li><a href="#" class="footer__menu-link">Blog</a></li>
+            <li><a href="#" class="footer__menu-link">La Nostra Storia</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2024 Castro Rizzo — Tutti i Diritti Riservati ®</p>
+        <div class="footer__bottom-links">
+          <a href="#privacy" class="footer__bottom-link">Privacy Policy</a>
+          <a href="#terms" class="footer__bottom-link">Termini e Condizioni</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    width: 100%;
+    background-color: var(--color-bg-dark);
+  }
+
+  .footer__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 3.75em;
+    padding-block: 3.75em;
+  }
+
+  /* Top row */
+  .footer__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer__logo {
+    display: flex;
+    align-items: center;
+    gap: 1.04175em; /* 16.667px */
+    text-decoration: none;
+  }
+
+  .footer__logo-img {
+    height: 15em;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+  }
+
+  .footer__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75em 1.25em;
+    background: var(--color-bg-white);
+    color: var(--color-text-dark);
+    font-family: var(--font-heading);
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.5;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  /* Info block */
+  .footer__info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+  }
+
+  .footer__info-main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 4em;
+    padding-bottom: 5em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .footer__address {
+    font-family: var(--font-body);
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-text-white);
+    max-width: 15.875em; /* 254px */
+  }
+
+  .footer__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .footer__contact-title {
+    font-family: var(--font-heading);
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--color-text-white);
+    text-transform: capitalize;
+    white-space: nowrap;
+  }
+
+  .footer__contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+  }
+
+  .footer__contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    font-family: var(--font-body);
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-text-white);
+    white-space: nowrap;
+  }
+
+  .footer__contact-item img {
+    width: 1.5em;
+    height: 1.5em;
+    flex-shrink: 0;
+  }
+
+  /* Menus */
+  .footer__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .footer__menu-title {
+    font-family: var(--font-heading);
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--color-text-white);
+    text-transform: capitalize;
+    white-space: nowrap;
+  }
+
+  .footer__menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    list-style: none;
+  }
+
+  .footer__menu-link {
+    font-family: var(--font-body);
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-text-white);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  /* Bottom bar */
+  .footer__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--font-body);
+    font-size: 0.875em;
+    font-weight: 400;
+    line-height: 1.8;
+    color: var(--color-text-white);
+    white-space: nowrap;
+    gap: 2em;
+  }
+
+  .footer__bottom-links {
+    display: flex;
+    gap: 5em;
+  }
+
+  .footer__bottom-link {
+    color: var(--color-text-white);
+    text-decoration: none;
+  }
+
+  /* ===================== Responsive ===================== */
+  @media (max-width: 991px) {
+    .footer__info-main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5em;
+      padding-bottom: 2.5em;
+    }
+
+    .footer__logo-text {
+      font-size: 2em;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .footer__top {
+      flex-direction: column;
+      gap: 1.5em;
+      align-items: flex-start;
+    }
+
+    .footer__info-main {
+      grid-template-columns: 1fr;
+      gap: 2em;
+    }
+
+    .footer__bottom {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1em;
+      white-space: normal;
+    }
+
+    .footer__bottom-links {
+      flex-direction: column;
+      gap: 0.75em;
+    }
+  }
+</style>

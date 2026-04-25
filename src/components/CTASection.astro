@@ -1,0 +1,101 @@
+---
+---
+
+<section class="cta">
+  <div class="cta__inner container container--padded">
+    <div class="cta__content">
+      <h2 class="cta__heading">
+        <span class="cta__heading-cap">La</span> tua vista non aspetta. Prenota oggi il tuo esame gratuito.
+      </h2>
+      <p class="cta__body">
+        L'esame della vista è gratuito, senza prenotazione obbligatoria e senza impegno — vieni a
+        trovarci quando vuoi.
+      </p>
+    </div>
+    <a href="#contact" class="cta__btn">Prenota la tua visita</a>
+  </div>
+</section>
+
+<style>
+  .cta {
+    width: 100%;
+    background-color: var(--color-bg-dark);
+    min-height: 32.1875em; /* 515px */
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+    align-items: center;
+    text-align: center;
+    padding-block: 3.75em;
+  }
+
+  .cta__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25em;
+    align-items: center;
+  }
+
+  .cta__heading {
+    font-family: var(--font-heading);
+    font-size: 3em;
+    font-weight: 500;
+    line-height: 1.167;
+    color: var(--color-text-white);
+    letter-spacing: -1.44px;
+    max-width: 17.375em; /* 834px / 48px */
+    text-transform: lowercase;
+  }
+
+  .cta__heading-cap {
+    text-transform: capitalize;
+  }
+
+  .cta__body {
+    font-family: var(--font-body);
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-text-white-soft);
+    max-width: 41.5em; /* 664px */
+  }
+
+  .cta__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75em 1.25em;
+    background-color: var(--color-primary);
+    color: var(--color-text-white);
+    font-family: var(--font-heading);
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.5;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  /* ===================== Responsive ===================== */
+  @media (max-width: 991px) {
+    .cta__heading {
+      font-size: 2.5em;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .cta__heading {
+      font-size: 2em;
+    }
+
+    .cta__btn {
+      width: 100%;
+    }
+  }
+</style>

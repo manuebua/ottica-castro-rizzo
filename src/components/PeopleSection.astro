@@ -1,0 +1,205 @@
+---
+---
+
+<section class="people">
+  <div class="people__inner container container--padded">
+    <!-- Left: image -->
+    <div class="people__image-col">
+      <img
+        src="/assets/images/people-photo.png"
+        alt="Legal professional"
+        width="567"
+        height="754"
+        class="people__photo"
+        loading="lazy"
+      />
+    </div>
+
+    <!-- Right: text + service list -->
+    <div class="people__content">
+      <p class="people__label">Per Te</p>
+
+      <div class="people__desc-wrap">
+        <h2 class="people__heading">La tua vista merita cure personalizzate, non soluzioni standard</h2>
+        <p class="people__body">
+          Affidarsi a un professionista locale significa poter contare su un rapporto diretto,
+          continuo e di fiducia. Ti seguiamo nel tempo e ti offriamo sempre la soluzione più adatta
+          a te.
+        </p>
+      </div>
+
+      <ul class="people__list" role="list">
+        <li class="people__list-item">
+          <div class="people__list-row">
+            <span class="people__list-title">Esame della vista gratuito</span>
+            <img
+              src="/assets/images/icon-send-sm.svg"
+              alt=""
+              width="24"
+              height="24"
+              class="people__list-arrow"
+            />
+          </div>
+        </li>
+        <li class="people__list-item">
+          <div class="people__list-row">
+            <span class="people__list-title">Montatura e lenti su misura</span>
+            <img
+              src="/assets/images/icon-send-sm.svg"
+              alt=""
+              width="24"
+              height="24"
+              class="people__list-arrow"
+            />
+          </div>
+        </li>
+        <li class="people__list-item people__list-item--last">
+          <div class="people__list-row">
+            <span class="people__list-title">Lenti a contatto personalizzate</span>
+            <img
+              src="/assets/images/icon-send-sm.svg"
+              alt=""
+              width="24"
+              height="24"
+              class="people__list-arrow"
+            />
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  .people {
+    width: 100%;
+    background-color: var(--color-bg-white);
+  }
+
+  .people__inner {
+    display: flex;
+    gap: 5em;
+    align-items: center;
+    padding-block: 3.75em;
+  }
+
+  /* Left image */
+  .people__image-col {
+    flex: 1;
+    min-width: 0;
+    background-color: var(--color-bg-gray-mid);
+    overflow: hidden;
+    align-self: stretch;
+    min-height: 38em; /* 608px */
+  }
+
+  .people__photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Right content */
+  .people__content {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.625em;
+  }
+
+  .people__label {
+    font-family: var(--font-body);
+    font-size: 1.25em;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--color-primary);
+    text-transform: uppercase;
+  }
+
+  .people__desc-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875em;
+  }
+
+  .people__heading {
+    font-family: var(--font-heading);
+    font-size: 3em;
+    font-weight: 500;
+    line-height: 1.167;
+    color: var(--color-text-dark);
+    letter-spacing: -1.44px;
+    max-width: 22.75em; /* 364px / 16px */
+  }
+
+  .people__body {
+    font-family: var(--font-body);
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-text-body);
+    max-width: 29.5625em; /* 473px */
+  }
+
+  /* Service list */
+  .people__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+  }
+
+  .people__list-item {
+    border-bottom: 1px solid var(--color-border);
+    padding-block: 1em;
+  }
+
+  .people__list-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .people__list-title {
+    font-family: var(--font-body);
+    font-size: 1.25em;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--color-text-dark);
+  }
+
+  .people__list-arrow {
+    width: 1.5em;
+    height: 1.5em;
+    flex-shrink: 0;
+    transform: rotate(180deg) scaleY(-1);
+  }
+
+  /* ===================== Responsive ===================== */
+  @media (max-width: 991px) {
+    .people__inner {
+      flex-direction: column;
+      gap: 2.5em;
+    }
+
+    .people__image-col {
+      width: 100%;
+      min-height: 20em;
+    }
+
+    .people__heading {
+      font-size: 2.5em;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .people__heading {
+      font-size: 2em;
+    }
+
+    .people__image-col {
+      min-height: 16em;
+    }
+  }
+</style>

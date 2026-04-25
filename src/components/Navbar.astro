@@ -1,0 +1,239 @@
+---
+---
+
+<header class="navbar">
+  <div class="navbar__inner container container--padded">
+    <div class="navbar__left">
+      <a href="/" class="navbar__logo" aria-label="Fotottica Castro Rizzo home">
+        <img
+          src="/assets/images/logo-fotottica.png"
+          alt="Fotottica Castro Rizzo"
+          width="120"
+          height="60"
+          class="navbar__logo-img"
+        />
+      </a>
+      <nav class="navbar__nav" aria-label="Navigazione principale">
+        <a href="#services" class="navbar__link">Servizi</a>
+        <a href="#people" class="navbar__link">Chi Siamo</a>
+        <a href="#locations" class="navbar__link">Dove Siamo</a>
+        <a href="#contact" class="navbar__link">Contatti</a>
+      </nav>
+    </div>
+
+    <!-- Mobile hamburger -->
+    <button class="navbar__hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="navbar__mobile" id="mobile-menu" aria-hidden="true">
+    <nav aria-label="Mobile navigation">
+      <a href="#services" class="navbar__mobile-link">Servizi</a>
+      <a href="#people" class="navbar__mobile-link">Chi Siamo</a>
+      <a href="#locations" class="navbar__mobile-link">Dove Siamo</a>
+      <a href="#contact" class="navbar__mobile-link">Contatti</a>
+    </nav>
+    <div class="navbar__mobile-actions">
+      <a href="#contact" class="navbar__btn navbar__btn--dark-outline">Prenota una visita</a>
+      <a href="#contact" class="navbar__btn navbar__btn--dark">Esame gratuito</a>
+    </div>
+  </div>
+</header>
+
+<style>
+  .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+  }
+
+  .navbar__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 1em;
+  }
+
+  .navbar__left {
+    display: flex;
+    align-items: center;
+    gap: 2.125em;
+  }
+
+  .navbar__logo {
+    display: flex;
+    align-items: center;
+    gap: 0.625em;
+    text-decoration: none;
+  }
+
+  .navbar__logo-img {
+    height: 8em;
+    width: auto;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+  }
+
+  .navbar__nav {
+    display: flex;
+    align-items: center;
+    gap: 0.25em;
+  }
+
+  .navbar__link {
+    font-family: var(--font-heading);
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--color-text-dark);
+    padding: 0.75em;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+
+  .navbar__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  .navbar__btn {
+    font-family: var(--font-heading);
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.5;
+    padding: 0.75em 1.25em;
+    white-space: nowrap;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar__btn--outline {
+    background: transparent;
+    border: 1px solid var(--color-text-dark);
+    color: var(--color-text-dark);
+  }
+
+  .navbar__btn--white {
+    background: var(--color-bg-white);
+    color: var(--color-text-dark);
+    border: none;
+  }
+
+  .navbar__btn--dark {
+    background: var(--color-bg-dark);
+    color: var(--color-text-white);
+    border: none;
+  }
+
+  .navbar__btn--dark-outline {
+    background: transparent;
+    border: 1px solid var(--color-text-dark);
+    color: var(--color-text-dark);
+  }
+
+  /* Hamburger — hidden on desktop */
+  .navbar__hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 0.3125em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5em;
+  }
+
+  .navbar__hamburger span {
+    display: block;
+    width: 1.5em;
+    height: 2px;
+    background: var(--color-text-dark);
+    transition: transform var(--transition-base);
+  }
+
+  /* Mobile menu — hidden on desktop */
+  .navbar__mobile {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--color-bg-white);
+    border-top: 1px solid var(--color-border);
+    padding: 1.5em var(--container-padding);
+    flex-direction: column;
+    gap: 0.5em;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  }
+
+  .navbar__mobile.is-open {
+    display: flex;
+  }
+
+  .navbar__mobile nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+  }
+
+  .navbar__mobile-link {
+    font-family: var(--font-heading);
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--color-text-dark);
+    padding: 0.75em 0;
+    border-bottom: 1px solid var(--color-border);
+    text-decoration: none;
+  }
+
+  .navbar__mobile-actions {
+    display: flex;
+    gap: 0.75em;
+    margin-top: 1em;
+  }
+
+  /* ===================== Responsive ===================== */
+  @media (max-width: 991px) {
+    .navbar__nav,
+    .navbar__actions {
+      display: none;
+    }
+
+    .navbar__hamburger {
+      display: flex;
+    }
+
+    .navbar__mobile {
+      padding-inline: var(--container-padding);
+    }
+  }
+
+  @media (max-width: 479px) {
+    .navbar__mobile-actions {
+      flex-direction: column;
+    }
+
+    .navbar__mobile-actions .navbar__btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+</style>
+
+<script is:inline>
+  const hamburger = document.querySelector('.navbar__hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('is-open');
+      hamburger.setAttribute('aria-expanded', open.toString());
+      mobileMenu.setAttribute('aria-hidden', (!open).toString());
+    });
+  }
+</script>

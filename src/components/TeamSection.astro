@@ -1,0 +1,342 @@
+---
+---
+
+<section class="team">
+  <div class="team__inner container container--padded">
+    <!-- Top: heading + description -->
+    <div class="team__header">
+      <div class="team__header-left">
+        <p class="team__label">Il Nostro Team</p>
+        <h2 class="team__heading">Persone competenti che si prendono cura di te come se fossi di famiglia</h2>
+      </div>
+      <p class="team__header-desc">
+        Il team di Fotottica Castro Rizzo è formato da professionisti appassionati, in costante
+        aggiornamento sulle ultime tecnologie ottiche. Ogni membro porta con sé anni di esperienza
+        e una vocazione genuina per il servizio al cliente. Quando entri da noi, sai che sei in
+        buone mani.
+      </p>
+    </div>
+
+    <!-- Bottom: 4-col member cards -->
+    <div class="team__members">
+      <!-- Member 1 -->
+      <article class="team__member">
+        <div class="team__member-photo-wrap">
+          <img
+            src="/assets/images/team-emma-johnson.png"
+            alt="Emma Johnson, Senior Litigation Attorney"
+            width="333"
+            height="443"
+            class="team__member-photo"
+            loading="lazy"
+          />
+        </div>
+        <div class="team__member-info">
+          <div class="team__member-row">
+            <span class="team__member-name">Antonino Castro Rizzo</span>
+            <img src="/assets/images/icon-send-xs.svg" alt="" width="20" height="20" class="team__member-arrow" />
+          </div>
+          <p class="team__member-role">Titolare & Optometrista</p>
+        </div>
+      </article>
+
+      <!-- Member 2 -->
+      <article class="team__member">
+        <div class="team__member-photo-wrap">
+          <img
+            src="/assets/images/team-ethan-carte.png"
+            alt="Ethan Carte, Estate Planning Lawyer"
+            width="304"
+            height="403"
+            class="team__member-photo"
+            loading="lazy"
+          />
+        </div>
+        <div class="team__member-info">
+          <div class="team__member-row">
+            <span class="team__member-name">Maria Grazia Russo</span>
+            <img src="/assets/images/icon-send-xs.svg" alt="" width="20" height="20" class="team__member-arrow" />
+          </div>
+          <p class="team__member-role">Ottico Diplomato</p>
+        </div>
+      </article>
+
+      <!-- Member 3 -->
+      <article class="team__member">
+        <div class="team__member-photo-wrap">
+          <img
+            src="/assets/images/team-isabella-carter.png"
+            alt="Isabella Carter, Corporate Counsel"
+            width="310"
+            height="411"
+            class="team__member-photo"
+            loading="lazy"
+          />
+        </div>
+        <div class="team__member-info">
+          <div class="team__member-row">
+            <span class="team__member-name">Salvatore Foti</span>
+            <img src="/assets/images/icon-send-xs.svg" alt="" width="20" height="20" class="team__member-arrow" />
+          </div>
+          <p class="team__member-role">Specialista Lenti a Contatto</p>
+        </div>
+      </article>
+
+      <!-- Join Team card -->
+      <article class="team__join">
+        <div class="team__join-top">
+          <img
+            src="/assets/images/icon-balance-scale-team.svg"
+            alt=""
+            width="34"
+            height="34"
+            class="team__join-icon"
+          />
+          <div class="team__join-text">
+            <h3 class="team__join-title">Lavora<br />con noi!</h3>
+            <p class="team__join-desc">
+              Sei appassionato di ottica e vuoi crescere in un ambiente professionale e familiare?
+              Siamo sempre alla ricerca di persone motivate.
+            </p>
+          </div>
+        </div>
+        <a href="#contact" class="team__join-btn">
+          Scopri le posizioni aperte
+          <img src="/assets/images/icon-send-xs2.svg" alt="" width="24" height="24" class="team__join-btn-arrow" />
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  .team {
+    width: 100%;
+    background-color: var(--color-bg-white);
+  }
+
+  .team__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
+    padding-block: 3.75em;
+    align-items: flex-end;
+  }
+
+  /* Header */
+  .team__header {
+    display: flex;
+    gap: 5em;
+    align-items: flex-end;
+    width: 100%;
+  }
+
+  .team__header-left {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.625em;
+  }
+
+  .team__label {
+    font-family: var(--font-body);
+    font-size: 1.25em;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--color-primary);
+    text-transform: uppercase;
+  }
+
+  .team__heading {
+    font-family: var(--font-heading);
+    font-size: 3em;
+    font-weight: 500;
+    line-height: 1.167;
+    color: var(--color-text-dark);
+    letter-spacing: -1.44px;
+  }
+
+  .team__header-desc {
+    flex: 1;
+    min-width: 0;
+    font-family: var(--font-body);
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-text-body);
+  }
+
+  /* Members grid */
+  .team__members {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5em;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  /* Photo cards */
+  .team__member {
+    background-color: var(--color-bg-gray-light);
+    position: relative;
+    height: 23.3125em; /* 373px */
+    overflow: hidden;
+  }
+
+  .team__member-photo-wrap {
+    position: absolute;
+    inset: 0;
+  }
+
+  .team__member-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .team__member-info {
+    position: absolute;
+    bottom: 0;
+    left: 0.875em;
+    width: 14.75em; /* 236px */
+    background: var(--color-bg-white);
+    padding: 0.625em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.125em;
+  }
+
+  .team__member-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .team__member-name {
+    font-family: var(--font-body);
+    font-size: 1.25em;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--color-text-dark);
+    white-space: nowrap;
+  }
+
+  .team__member-arrow {
+    width: 1.25em;
+    height: 1.25em;
+    flex-shrink: 0;
+    transform: rotate(180deg) scaleY(-1);
+  }
+
+  .team__member-role {
+    font-family: var(--font-body);
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.75;
+    color: var(--color-text-muted);
+  }
+
+  /* Join Team card */
+  .team__join {
+    background-color: var(--color-primary);
+    border-bottom: 1px solid var(--color-border);
+    border-left: 1px solid var(--color-border);
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 23.3125em; /* 373px */
+  }
+
+  .team__join-top {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875em;
+  }
+
+  .team__join-icon {
+    width: 2.125em;
+    height: 2.125em;
+    flex-shrink: 0;
+  }
+
+  .team__join-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625em;
+  }
+
+  .team__join-title {
+    font-family: var(--font-heading);
+    font-size: 1.5em;
+    font-weight: 500;
+    line-height: 1.333;
+    color: var(--color-text-white);
+    letter-spacing: -1.44px;
+  }
+
+  .team__join-desc {
+    font-family: var(--font-body);
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-text-white-soft);
+  }
+
+  .team__join-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.75em 1.25em;
+    background: var(--color-bg-white);
+    color: var(--color-text-dark);
+    font-family: var(--font-heading);
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.5;
+    text-decoration: none;
+    white-space: nowrap;
+    align-self: flex-start;
+  }
+
+  .team__join-btn-arrow {
+    width: 1.5em;
+    height: 1.5em;
+    flex-shrink: 0;
+    transform: rotate(180deg) scaleY(-1);
+  }
+
+  /* ===================== Responsive ===================== */
+  @media (max-width: 991px) {
+    .team__header {
+      flex-direction: column;
+      gap: 1.5em;
+      align-items: flex-start;
+    }
+
+    .team__members {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team__heading {
+      font-size: 2.5em;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .team__members {
+      grid-template-columns: 1fr;
+    }
+
+    .team__member,
+    .team__join {
+      height: 20em;
+    }
+
+    .team__heading {
+      font-size: 2em;
+    }
+  }
+</style>

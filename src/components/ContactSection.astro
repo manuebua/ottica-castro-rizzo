@@ -1,0 +1,315 @@
+---
+---
+
+<section class="contact">
+  <div class="contact__inner container container--padded">
+    <!-- Left: info -->
+    <div class="contact__info">
+      <div class="contact__info-header">
+        <h2 class="contact__heading">Siamo qui per te. Scrivici o chiamaci quando vuoi.</h2>
+        <p class="contact__body">
+          Che tu voglia prenotare un esame, hai domande sui nostri prodotti o vuoi semplicemente
+          saperne di più — contattaci, ti risponderemo con piacere e senza impegno.
+        </p>
+      </div>
+
+      <div class="contact__hours">
+        <h3 class="contact__hours-title">Orari di apertura</h3>
+        <div class="contact__hours-body">
+          <p>Lunedì – Venerdì: 09:00 – 13:00 / 16:00 – 19:30</p>
+          <p>Sabato: 09:00 – 13:00 &nbsp;|&nbsp; Domenica: Chiuso</p>
+        </div>
+      </div>
+
+      <div class="contact__social" aria-label="Social media links">
+        <a href="#" class="contact__social-btn" aria-label="Facebook">
+          <img src="/assets/images/social-icon-1.svg" alt="" width="16" height="16" />
+        </a>
+        <a href="#" class="contact__social-btn" aria-label="Twitter">
+          <img src="/assets/images/social-icon-2.svg" alt="" width="16" height="16" />
+        </a>
+        <a href="#" class="contact__social-btn" aria-label="Instagram">
+          <img src="/assets/images/social-icon-3.svg" alt="" width="16" height="16" />
+        </a>
+        <a href="#" class="contact__social-btn" aria-label="LinkedIn">
+          <img src="/assets/images/social-icon-4.svg" alt="" width="16" height="16" />
+        </a>
+      </div>
+    </div>
+
+    <!-- Right: form -->
+    <form class="contact__form" name="contact" method="POST" action="#">
+      <div class="contact__fields">
+        <!-- Row: first + last name -->
+        <div class="contact__row">
+          <div class="contact__field">
+            <label for="first-name" class="contact__label">Nome</label>
+            <input
+              type="text"
+              id="first-name"
+              name="first-name"
+              placeholder="Il tuo nome"
+              class="contact__input"
+              required
+            />
+          </div>
+          <div class="contact__field">
+            <label for="last-name" class="contact__label">Cognome</label>
+            <input
+              type="text"
+              id="last-name"
+              name="last-name"
+              placeholder="Il tuo cognome"
+              class="contact__input"
+              required
+            />
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="contact__field">
+          <label for="email" class="contact__label">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="La tua email"
+            class="contact__input"
+            required
+          />
+        </div>
+
+        <!-- Phone -->
+        <div class="contact__field">
+          <label for="phone" class="contact__label">Telefono</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Il tuo numero di telefono"
+            class="contact__input"
+          />
+        </div>
+
+        <!-- Message -->
+        <div class="contact__field">
+          <label for="message" class="contact__label">Messaggio</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Come possiamo aiutarti?"
+            class="contact__textarea"
+            rows="6"
+            required
+          ></textarea>
+        </div>
+      </div>
+
+      <button type="submit" class="contact__submit">Invia messaggio</button>
+    </form>
+  </div>
+</section>
+
+<style>
+  .contact {
+    width: 100%;
+    background-color: var(--color-bg-brown);
+  }
+
+  .contact__inner {
+    display: flex;
+    gap: 1.5em;
+    align-items: flex-start;
+    padding-block: 3.75em;
+  }
+
+  /* Left info */
+  .contact__info {
+    flex: 0 0 27.8125em; /* 445px */
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+  }
+
+  .contact__info-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .contact__heading {
+    font-family: var(--font-heading);
+    font-size: 3em;
+    font-weight: 500;
+    line-height: 1.167;
+    color: var(--color-primary);
+    max-width: 19.375em; /* 310px / 16px */
+  }
+
+  .contact__body {
+    font-family: var(--font-body);
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-text-body);
+    max-width: 19.375em;
+  }
+
+  .contact__hours {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625em;
+  }
+
+  .contact__hours-title {
+    font-family: var(--font-heading);
+    font-size: 1.5em;
+    font-weight: 500;
+    line-height: 1.333;
+    color: var(--color-primary);
+    letter-spacing: -1.44px;
+  }
+
+  .contact__hours-body {
+    font-family: var(--font-body);
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-text-body);
+  }
+
+  /* Social */
+  .contact__social {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+  }
+
+  .contact__social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5em;
+    height: 2.5em;
+    border: 1px solid var(--color-border-soft);
+    border-radius: var(--radius-icon);
+    padding: 0.75em;
+    flex-shrink: 0;
+  }
+
+  .contact__social-btn img {
+    width: 1em;
+    height: 1em;
+  }
+
+  /* Form */
+  .contact__form {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    background-color: var(--color-bg-brown);
+  }
+
+  .contact__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875em;
+  }
+
+  .contact__row {
+    display: flex;
+    gap: 0.75em;
+  }
+
+  .contact__field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .contact__label {
+    font-family: var(--font-body);
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-text-dark);
+  }
+
+  .contact__input,
+  .contact__textarea {
+    width: 100%;
+    background: var(--color-bg-white);
+    border: 1px solid var(--color-bg-input-border);
+    padding: 0.875em 1.5em;
+    font-family: var(--font-body);
+    font-size: 0.875em;
+    font-weight: 400;
+    line-height: 1.429;
+    color: var(--color-text-body);
+    outline: none;
+    appearance: none;
+  }
+
+  .contact__input::placeholder,
+  .contact__textarea::placeholder {
+    color: var(--color-text-body);
+  }
+
+  .contact__input:focus,
+  .contact__textarea:focus {
+    border-color: var(--color-primary);
+  }
+
+  .contact__textarea {
+    resize: vertical;
+    min-height: 8.75em; /* 140px */
+  }
+
+  .contact__submit {
+    width: 100%;
+    padding: 0.75em 1.25em;
+    background-color: var(--color-primary);
+    color: var(--color-text-white);
+    font-family: var(--font-heading);
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.5;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .contact__submit:hover {
+    opacity: 0.9;
+  }
+
+  /* ===================== Responsive ===================== */
+  @media (max-width: 991px) {
+    .contact__inner {
+      flex-direction: column;
+      gap: 2.5em;
+    }
+
+    .contact__info {
+      flex: none;
+      width: 100%;
+    }
+
+    .contact__heading {
+      font-size: 2.5em;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .contact__row {
+      flex-direction: column;
+    }
+
+    .contact__heading {
+      font-size: 2em;
+    }
+  }
+</style>

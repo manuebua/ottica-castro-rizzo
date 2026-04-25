@@ -1,0 +1,274 @@
+---
+---
+
+<section class="locations">
+  <div class="locations__inner container container--padded">
+    <!-- Header row -->
+    <div class="locations__header">
+      <div class="locations__header-left">
+        <p class="locations__label">Dove Siamo</p>
+        <h2 class="locations__heading">Vieni a trovarci: ti aspettiamo nel cuore di Bronte</h2>
+      </div>
+      <p class="locations__header-desc">
+        Il nostro negozio è facilmente raggiungibile e ti accoglie in un ambiente caldo e
+        professionale. Parcheggio comodo nelle vicinanze, nessuna attesa, solo servizio su misura.
+      </p>
+    </div>
+
+    <!-- Cards + map -->
+    <div class="locations__list">
+      <!-- 3 location cards -->
+      <div class="locations__cards">
+        <article class="locations__card locations__card--active">
+          <div class="locations__card-content">
+            <div class="locations__card-info">
+              <h3 class="locations__card-title">NEGOZIO PRINCIPALE</h3>
+              <p class="locations__card-address">
+                Bronte (CT), Sicilia<br />
+                Via Martiri di Via Fani, 51/B<br />
+                95034 Bronte (CT)
+              </p>
+            </div>
+            <a href="#contact" class="locations__card-btn">Come raggiungerci</a>
+          </div>
+        </article>
+
+        <article class="locations__card">
+          <div class="locations__card-content">
+            <div class="locations__card-info">
+              <h3 class="locations__card-title">PUNTO VENDITA ADRANO</h3>
+              <p class="locations__card-address">
+                Adrano (CT), Sicilia<br />
+                Via Vittorio Emanuele, 14<br />
+                95031 Adrano (CT)
+              </p>
+            </div>
+            <a href="#contact" class="locations__card-btn">Come raggiungerci</a>
+          </div>
+        </article>
+
+        <article class="locations__card">
+          <div class="locations__card-content">
+            <div class="locations__card-info">
+              <h3 class="locations__card-title">PUNTO VENDITA RANDAZZO</h3>
+              <p class="locations__card-address">
+                Randazzo (CT), Sicilia<br />
+                Corso Umberto I, 38<br />
+                95036 Randazzo (CT)
+              </p>
+            </div>
+            <a href="#contact" class="locations__card-btn">Come raggiungerci</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Map -->
+      <div class="locations__map">
+        <iframe
+          class="locations__map-iframe"
+          src="https://maps.google.com/maps?q=Via+Martiri+di+Via+Fani+51%2FB+95034+Bronte+CT+Italy&output=embed&hl=it&z=16"
+          title="Ottica Castro Rizzo — Via Martiri di Via Fani 51/B, Bronte (CT)"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <!-- Overlay link: click map → open Google Maps with directions -->
+        <a
+          class="locations__map-link"
+          href="https://www.google.com/maps/dir/?api=1&destination=Via+Martiri+di+Via+Fani+51%2FB+95034+Bronte+CT+Italy"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Apri Google Maps per le indicazioni verso Ottica Castro Rizzo"
+        ></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .locations {
+    width: 100%;
+    background-color: var(--color-bg-white);
+    overflow: hidden;
+  }
+
+  .locations__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 3.75em;
+    padding-block: 3.75em;
+  }
+
+  /* Header */
+  .locations__header {
+    display: flex;
+    gap: 5em;
+    align-items: flex-end;
+  }
+
+  .locations__header-left {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.625em;
+  }
+
+  .locations__label {
+    font-family: var(--font-body);
+    font-size: 1.25em;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--color-primary);
+    text-transform: uppercase;
+  }
+
+  .locations__heading {
+    font-family: var(--font-heading);
+    font-size: 3em;
+    font-weight: 500;
+    line-height: 1.167;
+    color: var(--color-text-dark);
+    letter-spacing: -1.44px;
+    max-width: 22.9375em; /* 367px / 16px */
+  }
+
+  .locations__header-desc {
+    flex: 1;
+    min-width: 0;
+    font-family: var(--font-body);
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-text-body);
+  }
+
+  /* List */
+  .locations__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+  }
+
+  /* Cards row */
+  .locations__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.125em;
+  }
+
+  .locations__card {
+    padding: 1.5em;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-white);
+  }
+
+  .locations__card--active {
+    background-color: var(--color-bg-brown);
+    border-color: transparent;
+  }
+
+  .locations__card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+  }
+
+  .locations__card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625em;
+  }
+
+  .locations__card-title {
+    font-family: var(--font-heading);
+    font-size: 1.5em;
+    font-weight: 500;
+    line-height: 1.333;
+    color: var(--color-text-dark);
+    text-transform: uppercase;
+  }
+
+  .locations__card-address {
+    font-family: var(--font-body);
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-text-body);
+  }
+
+  .locations__card-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75em 1.25em;
+    background-color: var(--color-primary);
+    color: var(--color-text-white);
+    font-family: var(--font-heading);
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.5;
+    text-decoration: none;
+    white-space: nowrap;
+    align-self: flex-start;
+  }
+
+  /* Map */
+  .locations__map {
+    position: relative;
+    width: 100%;
+    height: 34.25em; /* 548px */
+    background-color: #e8e8e8;
+    overflow: hidden;
+    border-radius: 0.25em;
+  }
+
+  .locations__map-iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+  }
+
+  /* Transparent overlay to capture clicks and redirect to Google Maps */
+  .locations__map-link {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    cursor: pointer;
+    background: transparent;
+  }
+
+  /* ===================== Responsive ===================== */
+  @media (max-width: 991px) {
+    .locations__header {
+      flex-direction: column;
+      gap: 1.5em;
+      align-items: flex-start;
+    }
+
+    .locations__cards {
+      grid-template-columns: 1fr;
+    }
+
+    .locations__heading {
+      font-size: 2.5em;
+    }
+
+    .locations__map {
+      height: 20em;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .locations__heading {
+      font-size: 2em;
+    }
+
+    .locations__map {
+      height: 15em;
+    }
+  }
+</style>

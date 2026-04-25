@@ -1,0 +1,67 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+  canonicalUrl?: string;
+}
+
+const {
+  title,
+  description = 'Legally — Innovative legal strategies paired with outstanding service. Our legal expertise and talent are tailored to meet the evolving needs.',
+  ogImage = '',
+  canonicalUrl = '',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- SEO -->
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="canonical" href={canonicalUrl || Astro.url.href} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    {description && <meta property="og:description" content={description} />}
+    {ogImage && <meta property="og:image" content={ogImage} />}
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl || Astro.url.href} />
+
+    <!-- Fonts: Lora -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- GSAP + ScrollTrigger -->
+    <script is:inline src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script is:inline src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  </head>
+  <body>
+    <a href="#main-content" class="sr-only">Skip to content</a>
+    <slot />
+
+    <script is:inline>
+      document.addEventListener('DOMContentLoaded', () => {
+        gsap.registerPlugin(ScrollTrigger);
+        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (prefersReduced) return;
+        // No animations specified in Figma design
+      });
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  @import '../styles/global.css';
+</style>
