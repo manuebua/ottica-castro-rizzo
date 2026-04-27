@@ -93,15 +93,14 @@
             class="team__join-icon"
           />
           <div class="team__join-text">
-            <h3 class="team__join-title">Lavora<br />con noi!</h3>
+            <h3 class="team__join-title">Scopri la promo della settimana.</h3>
             <p class="team__join-desc">
-              Sei appassionato di ottica e vuoi crescere in un ambiente professionale e familiare?
-              Siamo sempre alla ricerca di persone motivate.
+              Ogni settimana offerte esclusive su occhiali, lenti e montature. Vieni a trovarci in negozio e approfitta delle promo attive.
             </p>
           </div>
         </div>
-        <a href="#contact" class="team__join-btn">
-          Scopri le posizioni aperte
+        <a href="https://wa.me/393386570987" target="_blank" rel="noopener noreferrer" class="team__join-btn">
+          Scopri le promo
           <img src="/assets/images/icon-send-xs2.svg" alt="" width="24" height="24" class="team__join-btn-arrow" />
         </a>
       </article>
@@ -247,6 +246,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 2em;
     height: 23.3125em; /* 373px */
   }
 
@@ -326,6 +326,15 @@
   }
 
   @media (max-width: 767px) {
+    .team__inner {
+      padding-block: 2.5em;
+      gap: 2em;
+    }
+
+    .team__heading {
+      font-size: 1.75em;
+    }
+
     .team__members {
       grid-template-columns: 1fr;
     }
@@ -333,10 +342,6 @@
     .team__member,
     .team__join {
       height: 20em;
-    }
-
-    .team__heading {
-      font-size: 2em;
     }
   }
 </style>

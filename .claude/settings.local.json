@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install *)",
+      "Bash(python3 -c ' *)",
+      "Bash(pip3 install *)",
+      "Bash(python3 -c \"from nacl import encoding; print\\('OK'\\)\")",
+      "Bash(/c/Users/buama/AppData/Local/Programs/Python/Python313/python.exe -c \"from nacl import encoding; print\\('OK'\\)\")",
+      "Bash(/c/Users/buama/AppData/Local/Programs/Python/Python313/python.exe -c ' *)",
+      "Read(//c/Users/buama/Downloads/**)",
+      "Read(//c/Users/buama/**)",
+      "Bash(npm install *)"
+    ]
+  }
+}

@@ -6,34 +6,120 @@ interface Props {
   canonicalUrl?: string;
 }
 
+const SITE_URL = 'https://www.fototticacastrorizzo.it';
+
 const {
   title,
-  description = 'Legally — Innovative legal strategies paired with outstanding service. Our legal expertise and talent are tailored to meet the evolving needs.',
-  ogImage = '',
-  canonicalUrl = '',
+  description = 'Fotottica Castro Rizzo a Bronte (CT): occhiali da vista, occhiali da sole, lenti a contatto ed esame della vista gratuito. Da oltre 22 anni al tuo servizio.',
+  ogImage = `${SITE_URL}/assets/images/og-image.jpg`,
+  canonicalUrl = Astro.url.href,
 } = Astro.props;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Optician',
+  name: 'Fotottica Castro Rizzo',
+  description: 'Ottica a Bronte (CT) — occhiali da vista, occhiali da sole, lenti a contatto, esame della vista gratuito. Da oltre 22 anni al servizio della vista.',
+  url: SITE_URL,
+  logo: `${SITE_URL}/assets/images/logo-fotottica.png`,
+  image: ogImage,
+  telephone: '+393386570987',
+  priceRange: '€€',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Via Martiri di Via Fani, 51/B',
+    addressLocality: 'Bronte',
+    addressRegion: 'CT',
+    postalCode: '95034',
+    addressCountry: 'IT',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 37.7889,
+    longitude: 14.8322,
+  },
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '09:00',
+      closes: '13:00',
+    },
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '16:00',
+      closes: '19:30',
+    },
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Saturday'],
+      opens: '09:00',
+      closes: '13:00',
+    },
+  ],
+  sameAs: [
+    'https://www.facebook.com/fototticacastrorizzo',
+    'https://www.instagram.com/fototticacastrorizzo',
+  ],
+  hasMap: 'https://www.google.com/maps/place/Via+Martiri+di+Via+Fani,+51%2FB,+95034+Bronte+CT',
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: '+393386570987',
+    contactType: 'customer service',
+    availableLanguage: 'Italian',
+  },
+};
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="it">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
 
-    <!-- SEO -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/images/logo-fotottica.png" />
+    <link rel="apple-touch-icon" href="/assets/images/logo-fotottica.png" />
+    <meta name="theme-color" content="#8B1A0A" />
+
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="2NAKLU3r-SMJZpDI3OlgqOlpsTZSL6FneS_bx018dhg" />
+
+    <!-- Primary SEO -->
     <title>{title}</title>
-    {description && <meta name="description" content={description} />}
-    <link rel="canonical" href={canonicalUrl || Astro.url.href} />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="author" content="Fotottica Castro Rizzo" />
+    <meta name="keywords" content="ottica Bronte, occhiali da vista Bronte, occhiali da sole Bronte, lenti a contatto Bronte, esame della vista gratuito, ottico Bronte CT, Fotottica Castro Rizzo" />
+
+    <!-- Geo tags -->
+    <meta name="geo.region" content="IT-CT" />
+    <meta name="geo.placename" content="Bronte" />
+    <meta name="geo.position" content="37.7889;14.8322" />
+    <meta name="ICBM" content="37.7889, 14.8322" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content={title} />
-    {description && <meta property="og:description" content={description} />}
-    {ogImage && <meta property="og:image" content={ogImage} />}
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={canonicalUrl || Astro.url.href} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Fotottica Castro Rizzo" />
+    <meta property="og:locale" content="it_IT" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
     <!-- Fonts: Lora -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -56,7 +142,6 @@ const {
         gsap.registerPlugin(ScrollTrigger);
         const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         if (prefersReduced) return;
-        // No animations specified in Figma design
       });
     </script>
   </body>

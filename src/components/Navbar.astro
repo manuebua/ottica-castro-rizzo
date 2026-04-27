@@ -36,8 +36,7 @@
       <a href="#contact" class="navbar__mobile-link">Contatti</a>
     </nav>
     <div class="navbar__mobile-actions">
-      <a href="#contact" class="navbar__btn navbar__btn--dark-outline">Prenota una visita</a>
-      <a href="#contact" class="navbar__btn navbar__btn--dark">Esame gratuito</a>
+      <a href="https://wa.me/393386570987" target="_blank" rel="noopener noreferrer" class="navbar__btn navbar__btn--dark-outline">Prenota una visita</a>
     </div>
   </div>
 </header>
@@ -200,6 +199,19 @@
 
   /* ===================== Responsive ===================== */
   @media (max-width: 991px) {
+    .navbar {
+      position: relative;
+      background-color: var(--color-bg-brown);
+    }
+
+    .navbar__inner {
+      padding-block: 0.5em;
+    }
+
+    .navbar__logo-img {
+      height: 5em;
+    }
+
     .navbar__nav,
     .navbar__actions {
       display: none;
@@ -209,8 +221,21 @@
       display: flex;
     }
 
+    .navbar__hamburger span {
+      background: var(--color-primary);
+    }
+
     .navbar__mobile {
       padding-inline: var(--container-padding);
+    }
+
+    .navbar__mobile-link {
+      color: var(--color-primary);
+    }
+
+    .navbar__mobile-actions .navbar__btn--dark-outline {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
     }
   }
 

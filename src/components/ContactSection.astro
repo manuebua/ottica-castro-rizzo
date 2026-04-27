@@ -304,22 +304,27 @@
   }
 
   @media (max-width: 767px) {
+    .contact__inner {
+      padding-block: 2.5em;
+      gap: 2em;
+    }
+
+    .contact__heading {
+      font-size: 1.75em;
+    }
+
     .contact__row {
       flex-direction: column;
     }
 
+    .contact__form,
+    .contact__fields,
+    .contact__field,
     .contact__input,
-    .contact__textarea {
+    .contact__textarea,
+    .contact__submit {
       width: 100%;
       box-sizing: border-box;
-    }
-
-    .contact__field {
-      width: 100%;
-    }
-
-    .contact__heading {
-      font-size: 2em;
     }
   }
 </style>

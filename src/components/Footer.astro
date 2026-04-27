@@ -14,7 +14,7 @@
           class="footer__logo-img"
         />
       </a>
-      <a href="#contact" class="footer__cta">Prenota una visita</a>
+      <a href="https://wa.me/393386570987" target="_blank" rel="noopener noreferrer" class="footer__cta">Prenota una visita</a>
     </div>
 
     <!-- Info block -->
@@ -61,7 +61,7 @@
 
       <!-- Bottom bar -->
       <div class="footer__bottom">
-        <p class="footer__copyright">© 2024 Castro Rizzo — Tutti i Diritti Riservati ®</p>
+        <p class="footer__copyright">© 2026 Castro Rizzo — Tutti i Diritti Riservati ®</p>
         <div class="footer__bottom-links">
           <a href="#privacy" class="footer__bottom-link">Privacy Policy</a>
           <a href="#terms" class="footer__bottom-link">Termini e Condizioni</a>
@@ -258,6 +258,11 @@
   }
 
   @media (max-width: 767px) {
+    .footer__inner {
+      padding-block: 2.5em;
+      gap: 2em;
+    }
+
     .footer__top {
       flex-direction: column;
       gap: 1.5em;
@@ -267,6 +272,7 @@
     .footer__info-main {
       grid-template-columns: 1fr;
       gap: 2em;
+      padding-bottom: 2em;
     }
 
     .footer__bottom {

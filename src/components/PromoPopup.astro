@@ -1,0 +1,135 @@
+---
+---
+
+<!-- Promo Popup -->
+<div class="popup__overlay" id="promo-popup" aria-modal="true" role="dialog" aria-label="Promozione della settimana" hidden>
+  <div class="popup__box">
+    <button class="popup__close" id="promo-popup-close" aria-label="Chiudi">&#x2715;</button>
+    <img
+      src="/assets/images/promo-popup.png"
+      alt="Raddoppia le lenti — Acquista gli occhiali da vista e ricevi le lenti da sole in omaggio"
+      class="popup__img"
+      width="1080"
+      height="1080"
+    />
+  </div>
+</div>
+
+<style>
+  .popup__overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25em;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+  }
+
+  .popup__overlay.is-visible {
+    opacity: 1;
+  }
+
+  .popup__overlay[hidden] {
+    display: none;
+  }
+
+  .popup__box {
+    position: relative;
+    max-width: 34em;
+    width: 100%;
+    border-radius: 0.5em;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35);
+    transform: translateY(1.5em) scale(0.97);
+    transition: transform 0.35s ease;
+  }
+
+  .popup__overlay.is-visible .popup__box {
+    transform: translateY(0) scale(1);
+  }
+
+  .popup__img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .popup__close {
+    position: absolute;
+    top: 0.625em;
+    right: 0.625em;
+    width: 2.25em;
+    height: 2.25em;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    font-size: 1em;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-dark);
+    z-index: 10;
+    transition: background 0.2s;
+  }
+
+  .popup__close:hover {
+    background: #fff;
+  }
+
+  /* Mobile */
+  @media (max-width: 767px) {
+    .popup__overlay {
+      padding: 1em;
+      align-items: center;
+    }
+
+    .popup__box {
+      max-width: 100%;
+    }
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    var popup = document.getElementById('promo-popup');
+    var closeBtn = document.getElementById('promo-popup-close');
+
+    function openPopup() {
+      popup.removeAttribute('hidden');
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          popup.classList.add('is-visible');
+        });
+      });
+    }
+
+    function closePopup() {
+      popup.classList.remove('is-visible');
+      setTimeout(function () {
+        popup.setAttribute('hidden', '');
+      }, 350);
+    }
+
+    // Show after 15 seconds
+    setTimeout(openPopup, 15000);
+
+    // Close on X button
+    closeBtn.addEventListener('click', closePopup);
+
+    // Close clicking outside the box
+    popup.addEventListener('click', function (e) {
+      if (e.target === popup) closePopup();
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closePopup();
+    });
+  })();
+</script>
