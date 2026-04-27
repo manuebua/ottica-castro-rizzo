@@ -199,7 +199,8 @@
     position: absolute;
     bottom: 0;
     left: 0.875em;
-    width: 14.75em; /* 236px */
+    right: 0.875em;
+    width: auto;
     background: var(--color-bg-white);
     padding: 0.625em;
     display: flex;
@@ -219,7 +220,8 @@
     font-weight: 400;
     line-height: 1.4;
     color: var(--color-text-dark);
-    white-space: nowrap;
+    white-space: normal;
+    word-break: break-word;
   }
 
   .team__member-arrow {
@@ -339,9 +341,20 @@
       grid-template-columns: 1fr;
     }
 
-    .team__member,
-    .team__join {
+    .team__member {
       height: 20em;
+    }
+
+    .team__join {
+      height: auto;
+      min-height: 16em;
+    }
+
+    .team__join-btn {
+      width: 100%;
+      justify-content: center;
+      white-space: normal;
+      text-align: center;
     }
   }
 </style>
